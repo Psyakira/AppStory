@@ -37,6 +37,12 @@ class AddStoryActivity : AppCompatActivity() {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
+        binding.locationSwitch.setOnCheckedChangeListener { _, isChecked ->
+            viewModel.setIncludeLocation(isChecked)
+            if (isChecked) {
+                requestLocation()
+            }
+        }
 
         binding.galleryButton.setOnClickListener { startGallery() }
         binding.cameraButton.setOnClickListener { startCamera() }

@@ -11,4 +11,9 @@
         android:title="@string/change_language"
         android:orderInCategory="101"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_open_maps"
+        android:title="Open Maps"
+        android:icon="@drawable/ic_maps"
+        app:showAsAction="ifRoom" />
 </menu>

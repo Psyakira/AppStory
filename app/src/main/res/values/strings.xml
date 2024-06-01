@@ -31,4 +31,6 @@
     <string name="title_welcome_page">Welcome to Story App!</string>
     <string name="change_language">Change Language</string>
     <string name="retry">retry\n</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="include_location">include location</string>
 </resources>

@@ -27,6 +27,10 @@ class StoryRepository {
             pagingSourceFactory = { StoryPagingSource(this, token) }
         ).liveData
     }
+    suspend fun getStoriesWithLocation(token: String): StoryResponse {
+        val apiServiceWithToken = ApiConfig.getApiService(token)
+        return apiServiceWithToken.getStoriesWithLocation(1)
+    }
 
     suspend fun getStories(token: String, page: Int): StoryResponse {
         val apiServiceWithToken = ApiConfig.getApiService(token)
